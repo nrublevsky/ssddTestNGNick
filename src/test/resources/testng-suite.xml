@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="My SUITE">
+
+    <test name="Webdriver">
+        <parameter name="my_parameter" value="123456"/>
+        <classes>
+            <class name="MyTest" />
+            <class name ="MyTest1"/>
+        </classes>
+    </test>
+</suite>
