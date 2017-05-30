@@ -6,8 +6,7 @@
     <test name="Webdriver">
         <parameter name="my_parameter" value="123456"/>
         <classes>
-            <class name="MyTest" />
-            <class name ="MyTest1"/>
+            <class name="Tests.MyTest" />
         </classes>
     </test>
 </suite>
