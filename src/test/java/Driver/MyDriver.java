@@ -1,6 +1,7 @@
 package Driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,7 +16,7 @@ import java.util.Set;
  */
 public class MyDriver implements WebDriver {
     private WebDriver  driver;
-    private static MyDriver myDriver=null;
+    private static MyDriver myDriver;
 
     private MyDriver() {
         this.driver = MyDriverFactory.getDriver();
@@ -94,6 +95,16 @@ public class MyDriver implements WebDriver {
         return new WebDriverWait(driver,timeOut, 500)
                 .until( ExpectedConditions.visibilityOf(webElement));
 
+    }
+   public void scrollUp() {
+        ((JavascriptExecutor)driver).executeScript("window.scrollTo(0,0)");
+
+    }
+    /**
+     * Scroll Down
+     */
+    public void scrollDown() {
+        ((JavascriptExecutor)driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
 
     }
 }

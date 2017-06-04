@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class MyTest extends BaseTest {
 
     @Test(description = "@345")
-    public void testA() throws InterruptedException {
+    public void testA() {
         app.login.loginValidUser();
 
         Assert.assertEquals(app.mail.getUserMail(), validUser.mail);
